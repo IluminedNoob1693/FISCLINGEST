@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,163 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Icon_modulo_pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Icon_modulo_pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Exportar_Reporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Icon_Exportar_Reporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_editar_paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Icon_editar_paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_cerrar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Icon_cerrar_sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eliminar_paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Eliminar_paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Anular_Cuota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Cuotas\Icon_Anular_Cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_editar_usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Usuarios\Icon_editar_usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Modulo_Cuotas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Cuotas\Icon_Modulo_Cuotas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Agregar_paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Agregar_paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\icon_maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Añadir_Lista_Espera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Lista de espera\Añadir_Lista_Espera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mobile-Menu-Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mobile-Menu-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_restaurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\icon_restaurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Agendar_Cita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Agendar_Cita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Agenda_citas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Icon_Agenda_citas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Exportar_Cuota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Cuotas\Icon_Exportar_Cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Buscar_Cuota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Cuotas\Icon_Buscar_Cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Editar_Cuota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Cuotas\Icon_Editar_Cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_editar_lista_espera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Lista de espera\Icon_editar_lista_espera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_cancelar_Cita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Icon_cancelar_Cita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_submodulo_exportar_reporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Icon_submodulo_exportar_reporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_crear_respaldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Respaldos\Icon_crear_respaldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono_contrasena_rojo_transparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Loguin\icono_contrasena_rojo_transparente.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Directorio_pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Directorio_pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Buscar_Cita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Icon_Buscar_Cita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lista_Espera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Lista de espera\Lista_Espera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Agregar_Cuota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Cuotas\Icon_Agregar_Cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconio loguin FISCLINGENT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconio loguin FISCLINGENT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eliminar_Lista_Espera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Lista de espera\Eliminar_Lista_Espera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_cerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\icon_cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuarios_icono_rojo_transparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Loguin\usuarios_icono_rojo_transparente.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Agendar_Cita1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Agendar_Cita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Buscar_paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Buscar_paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_modulo_Administración1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Icon_modulo_Administración.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Buscar_Cuota1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Cuotas\Icon_Buscar_Cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Bloquear_Agenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Icon_Bloquear_Agenda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Ver_Historial_Clinico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Historial clínico\Icon_Ver_Historial_Clinico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconio loguin FISCLINGENT1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Loguin\iconio loguin FISCLINGENT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Submodulo_Gestion_Usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Usuarios\Icon_Submodulo_Gestion_Usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_modulo_Administración" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Icon_modulo_Administración.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icron_Agregar_Usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Usuarios\icron_Agregar_Usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_maximizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\icon_maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Desbloquear_Agenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Icon_Desbloquear_Agenda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizar_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\minimizar_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icono FISCLINGENT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Icono FISCLINGENT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icron_Desactivar_Usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Usuarios\icron_Desactivar_Usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Reprogramar_Cita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Icon_Reprogramar_Cita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_submodulo_respaldos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Administración\Respaldos\Icon_submodulo_respaldos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Añadir_Historial_Clinico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Pacientes\Historial clínico\Icon_Añadir_Historial_Clinico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\icon_cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Exportar_Agenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos_Diseño\Iconospersonalizados\Citas\Icon_Exportar_Agenda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
