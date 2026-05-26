@@ -34,21 +34,27 @@
             this.Cerrar_AgregarPaciente = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_Cerrar_loguin = new System.Windows.Forms.PictureBox();
-            this.ckb_ConsultaAnual = new System.Windows.Forms.CheckBox();
-            this.ckb_ConsultaMensual = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txt_AñoHistorialCuotas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbx_MesHistorialCuotas = new System.Windows.Forms.ComboBox();
-            this.cbx_EstadoPago = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_ConsultarCuotas = new System.Windows.Forms.Button();
+            this.rdb_ConsultaAnual = new System.Windows.Forms.RadioButton();
+            this.rdb_ConsultaMensual = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.rdb_EstadoAnulado = new System.Windows.Forms.RadioButton();
+            this.rdb_EstadoActivo = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel_TituloConsultarCuota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_CerrarConsultaCita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_AgregarPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar_loguin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_TituloConsultarCuota
@@ -118,46 +124,13 @@
             this.btn_Cerrar_loguin.TabIndex = 10;
             this.btn_Cerrar_loguin.TabStop = false;
             // 
-            // ckb_ConsultaAnual
-            // 
-            this.ckb_ConsultaAnual.AutoSize = true;
-            this.ckb_ConsultaAnual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ckb_ConsultaAnual.Location = new System.Drawing.Point(156, 105);
-            this.ckb_ConsultaAnual.Name = "ckb_ConsultaAnual";
-            this.ckb_ConsultaAnual.Size = new System.Drawing.Size(53, 17);
-            this.ckb_ConsultaAnual.TabIndex = 27;
-            this.ckb_ConsultaAnual.Text = "Anual";
-            this.ckb_ConsultaAnual.UseVisualStyleBackColor = true;
-            // 
-            // ckb_ConsultaMensual
-            // 
-            this.ckb_ConsultaMensual.AutoSize = true;
-            this.ckb_ConsultaMensual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ckb_ConsultaMensual.Location = new System.Drawing.Point(27, 105);
-            this.ckb_ConsultaMensual.Name = "ckb_ConsultaMensual";
-            this.ckb_ConsultaMensual.Size = new System.Drawing.Size(66, 17);
-            this.ckb_ConsultaMensual.TabIndex = 26;
-            this.ckb_ConsultaMensual.Text = "Mensual";
-            this.ckb_ConsultaMensual.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(49, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 21);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Tipo de consulta:";
-            // 
             // txt_AñoHistorialCuotas
             // 
             this.txt_AñoHistorialCuotas.BackColor = System.Drawing.Color.LightBlue;
             this.txt_AñoHistorialCuotas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_AñoHistorialCuotas.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_AñoHistorialCuotas.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txt_AñoHistorialCuotas.Location = new System.Drawing.Point(153, 166);
+            this.txt_AñoHistorialCuotas.Location = new System.Drawing.Point(153, 242);
             this.txt_AñoHistorialCuotas.Multiline = true;
             this.txt_AñoHistorialCuotas.Name = "txt_AñoHistorialCuotas";
             this.txt_AñoHistorialCuotas.Size = new System.Drawing.Size(90, 32);
@@ -169,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(173, 142);
+            this.label4.Location = new System.Drawing.Point(173, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 21);
             this.label4.TabIndex = 28;
@@ -180,7 +153,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(23, 142);
+            this.label1.Location = new System.Drawing.Point(23, 218);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 21);
             this.label1.TabIndex = 30;
@@ -206,36 +179,10 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cbx_MesHistorialCuotas.Location = new System.Drawing.Point(12, 166);
+            this.cbx_MesHistorialCuotas.Location = new System.Drawing.Point(12, 242);
             this.cbx_MesHistorialCuotas.Name = "cbx_MesHistorialCuotas";
             this.cbx_MesHistorialCuotas.Size = new System.Drawing.Size(116, 29);
             this.cbx_MesHistorialCuotas.TabIndex = 41;
-            // 
-            // cbx_EstadoPago
-            // 
-            this.cbx_EstadoPago.BackColor = System.Drawing.Color.LightBlue;
-            this.cbx_EstadoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbx_EstadoPago.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cbx_EstadoPago.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cbx_EstadoPago.FormattingEnabled = true;
-            this.cbx_EstadoPago.Items.AddRange(new object[] {
-            "Activo",
-            "Anulado"});
-            this.cbx_EstadoPago.Location = new System.Drawing.Point(63, 238);
-            this.cbx_EstadoPago.Name = "cbx_EstadoPago";
-            this.cbx_EstadoPago.Size = new System.Drawing.Size(128, 29);
-            this.cbx_EstadoPago.TabIndex = 43;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(68, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 21);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Estado pago:";
             // 
             // btn_ConsultarCuotas
             // 
@@ -252,25 +199,115 @@
             this.btn_ConsultarCuotas.UseVisualStyleBackColor = false;
             this.btn_ConsultarCuotas.Click += new System.EventHandler(this.btn_ConsultarCuotas_Click);
             // 
+            // rdb_ConsultaAnual
+            // 
+            this.rdb_ConsultaAnual.AutoSize = true;
+            this.rdb_ConsultaAnual.ForeColor = System.Drawing.Color.LightBlue;
+            this.rdb_ConsultaAnual.Location = new System.Drawing.Point(133, 48);
+            this.rdb_ConsultaAnual.Name = "rdb_ConsultaAnual";
+            this.rdb_ConsultaAnual.Size = new System.Drawing.Size(52, 17);
+            this.rdb_ConsultaAnual.TabIndex = 51;
+            this.rdb_ConsultaAnual.TabStop = true;
+            this.rdb_ConsultaAnual.Text = "Anual";
+            this.rdb_ConsultaAnual.UseVisualStyleBackColor = true;
+            // 
+            // rdb_ConsultaMensual
+            // 
+            this.rdb_ConsultaMensual.AutoSize = true;
+            this.rdb_ConsultaMensual.ForeColor = System.Drawing.Color.LightBlue;
+            this.rdb_ConsultaMensual.Location = new System.Drawing.Point(33, 48);
+            this.rdb_ConsultaMensual.Name = "rdb_ConsultaMensual";
+            this.rdb_ConsultaMensual.Size = new System.Drawing.Size(65, 17);
+            this.rdb_ConsultaMensual.TabIndex = 50;
+            this.rdb_ConsultaMensual.TabStop = true;
+            this.rdb_ConsultaMensual.Text = "Mensual";
+            this.rdb_ConsultaMensual.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(50, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 21);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Tipo de consulta:";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitContainer1.Location = new System.Drawing.Point(12, 52);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.rdb_ConsultaAnual);
+            this.splitContainer1.Panel1.Controls.Add(this.rdb_ConsultaMensual);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.rdb_EstadoAnulado);
+            this.splitContainer1.Panel2.Controls.Add(this.rdb_EstadoActivo);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Size = new System.Drawing.Size(231, 155);
+            this.splitContainer1.SplitterDistance = 77;
+            this.splitContainer1.TabIndex = 52;
+            // 
+            // rdb_EstadoAnulado
+            // 
+            this.rdb_EstadoAnulado.AutoSize = true;
+            this.rdb_EstadoAnulado.ForeColor = System.Drawing.Color.LightBlue;
+            this.rdb_EstadoAnulado.Location = new System.Drawing.Point(133, 47);
+            this.rdb_EstadoAnulado.Name = "rdb_EstadoAnulado";
+            this.rdb_EstadoAnulado.Size = new System.Drawing.Size(64, 17);
+            this.rdb_EstadoAnulado.TabIndex = 51;
+            this.rdb_EstadoAnulado.TabStop = true;
+            this.rdb_EstadoAnulado.Text = "Anulado";
+            this.rdb_EstadoAnulado.UseVisualStyleBackColor = true;
+            // 
+            // rdb_EstadoActivo
+            // 
+            this.rdb_EstadoActivo.AutoSize = true;
+            this.rdb_EstadoActivo.ForeColor = System.Drawing.Color.LightBlue;
+            this.rdb_EstadoActivo.Location = new System.Drawing.Point(33, 47);
+            this.rdb_EstadoActivo.Name = "rdb_EstadoActivo";
+            this.rdb_EstadoActivo.Size = new System.Drawing.Size(55, 17);
+            this.rdb_EstadoActivo.TabIndex = 50;
+            this.rdb_EstadoActivo.TabStop = true;
+            this.rdb_EstadoActivo.Text = "Activo";
+            this.rdb_EstadoActivo.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(50, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 21);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Estado pago:";
+            // 
             // Consultar_Cuotas
             // 
+            this.AcceptButton = this.btn_ConsultarCuotas;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(255, 350);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btn_ConsultarCuotas);
-            this.Controls.Add(this.cbx_EstadoPago);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbx_MesHistorialCuotas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_AñoHistorialCuotas);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ckb_ConsultaAnual);
-            this.Controls.Add(this.ckb_ConsultaMensual);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel_TituloConsultarCuota);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_Cuotas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar_Cuotas";
             this.Load += new System.EventHandler(this.Consultar_Cuotas_Load);
             this.panel_TituloConsultarCuota.ResumeLayout(false);
@@ -279,6 +316,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbx_CerrarConsultaCita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_AgregarPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar_loguin)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,15 +335,17 @@
         private System.Windows.Forms.PictureBox Cerrar_AgregarPaciente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox btn_Cerrar_loguin;
-        private System.Windows.Forms.CheckBox ckb_ConsultaAnual;
-        private System.Windows.Forms.CheckBox ckb_ConsultaMensual;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_AñoHistorialCuotas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbx_MesHistorialCuotas;
-        private System.Windows.Forms.ComboBox cbx_EstadoPago;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_ConsultarCuotas;
+        private System.Windows.Forms.RadioButton rdb_ConsultaAnual;
+        private System.Windows.Forms.RadioButton rdb_ConsultaMensual;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.RadioButton rdb_EstadoAnulado;
+        private System.Windows.Forms.RadioButton rdb_EstadoActivo;
+        private System.Windows.Forms.Label label2;
     }
 }

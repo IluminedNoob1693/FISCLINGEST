@@ -66,7 +66,7 @@ namespace FISCLINGEST.Módulos.Interfaces_Administracion
             cbx_Tipo_Periodo.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, cbx_Tipo_Periodo.Width, cbx_Tipo_Periodo .Height, 10, 10));
 
             //redondear combobox del formato
-            cbx_Formato.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, cbx_Formato.Width, cbx_Formato.Height, 10, 10));
+            
 
             //redondear textbox de año
             txt_AñoReporte.BorderStyle = BorderStyle.None; // Recomendado para textboxes redondeados

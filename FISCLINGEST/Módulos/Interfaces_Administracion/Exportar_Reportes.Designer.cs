@@ -47,13 +47,14 @@
             this.ckb_ReporteAgenda = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbx_Tipo_Periodo = new System.Windows.Forms.ComboBox();
-            this.cbx_Formato = new System.Windows.Forms.ComboBox();
             this.cbx_MesReporte = new System.Windows.Forms.ComboBox();
             this.txt_SemanaReporte = new System.Windows.Forms.TextBox();
             this.dtp_FechaReporte = new System.Windows.Forms.DateTimePicker();
             this.txt_AutorReporte = new System.Windows.Forms.TextBox();
             this.btn_Ruta_Archivo = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel_TituloExportarReporte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar_ExportarReportes)).BeginInit();
@@ -68,7 +69,7 @@
             this.panel_TituloExportarReporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TituloExportarReporte.Location = new System.Drawing.Point(0, 0);
             this.panel_TituloExportarReporte.Name = "panel_TituloExportarReporte";
-            this.panel_TituloExportarReporte.Size = new System.Drawing.Size(550, 46);
+            this.panel_TituloExportarReporte.Size = new System.Drawing.Size(540, 46);
             this.panel_TituloExportarReporte.TabIndex = 4;
             this.panel_TituloExportarReporte.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_TituloExportarReporte_MouseDown);
             // 
@@ -96,7 +97,7 @@
             // btn_Cerrar_ExportarReportes
             // 
             this.btn_Cerrar_ExportarReportes.Image = global::FISCLINGEST.Properties.Resources.icon_cerrar1;
-            this.btn_Cerrar_ExportarReportes.Location = new System.Drawing.Point(520, 12);
+            this.btn_Cerrar_ExportarReportes.Location = new System.Drawing.Point(510, 12);
             this.btn_Cerrar_ExportarReportes.Name = "btn_Cerrar_ExportarReportes";
             this.btn_Cerrar_ExportarReportes.Size = new System.Drawing.Size(18, 18);
             this.btn_Cerrar_ExportarReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,7 +111,7 @@
             this.txt_AñoReporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_AñoReporte.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_AñoReporte.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txt_AñoReporte.Location = new System.Drawing.Point(34, 200);
+            this.txt_AñoReporte.Location = new System.Drawing.Point(45, 201);
             this.txt_AñoReporte.Multiline = true;
             this.txt_AñoReporte.Name = "txt_AñoReporte";
             this.txt_AñoReporte.Size = new System.Drawing.Size(84, 30);
@@ -122,7 +123,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(225, 68);
+            this.label1.Location = new System.Drawing.Point(193, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 21);
             this.label1.TabIndex = 46;
@@ -133,7 +134,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(54, 166);
+            this.label3.Location = new System.Drawing.Point(65, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 48;
@@ -144,7 +145,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(242, 167);
+            this.label4.Location = new System.Drawing.Point(235, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 21);
             this.label4.TabIndex = 49;
@@ -155,7 +156,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(418, 166);
+            this.label5.Location = new System.Drawing.Point(409, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 21);
             this.label5.TabIndex = 50;
@@ -166,7 +167,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(79, 265);
+            this.label6.Location = new System.Drawing.Point(65, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 21);
             this.label6.TabIndex = 51;
@@ -177,7 +178,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(430, 68);
+            this.label7.Location = new System.Drawing.Point(409, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 21);
             this.label7.TabIndex = 52;
@@ -188,7 +189,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(220, 363);
+            this.label9.Location = new System.Drawing.Point(218, 355);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 21);
             this.label9.TabIndex = 53;
@@ -213,7 +214,7 @@
             this.btn_ExportarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ExportarReporte.Font = new System.Drawing.Font("Futura Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ExportarReporte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_ExportarReporte.Location = new System.Drawing.Point(215, 456);
+            this.btn_ExportarReporte.Location = new System.Drawing.Point(213, 448);
             this.btn_ExportarReporte.Name = "btn_ExportarReporte";
             this.btn_ExportarReporte.Size = new System.Drawing.Size(128, 32);
             this.btn_ExportarReporte.TabIndex = 55;
@@ -225,24 +226,24 @@
             // 
             this.ckb_ReportePagos.AutoSize = true;
             this.ckb_ReportePagos.FlatAppearance.BorderSize = 0;
-            this.ckb_ReportePagos.ForeColor = System.Drawing.Color.AliceBlue;
-            this.ckb_ReportePagos.Location = new System.Drawing.Point(91, 112);
+            this.ckb_ReportePagos.ForeColor = System.Drawing.Color.LightBlue;
+            this.ckb_ReportePagos.Location = new System.Drawing.Point(453, 112);
             this.ckb_ReportePagos.Name = "ckb_ReportePagos";
-            this.ckb_ReportePagos.Size = new System.Drawing.Size(56, 17);
+            this.ckb_ReportePagos.Size = new System.Drawing.Size(47, 17);
             this.ckb_ReportePagos.TabIndex = 57;
-            this.ckb_ReportePagos.Text = "Pagos";
+            this.ckb_ReportePagos.Text = "PDF";
             this.ckb_ReportePagos.UseVisualStyleBackColor = true;
             // 
             // ckb_ReporteAgenda
             // 
             this.ckb_ReporteAgenda.AutoSize = true;
             this.ckb_ReporteAgenda.FlatAppearance.BorderSize = 0;
-            this.ckb_ReporteAgenda.ForeColor = System.Drawing.Color.AliceBlue;
-            this.ckb_ReporteAgenda.Location = new System.Drawing.Point(20, 112);
+            this.ckb_ReporteAgenda.ForeColor = System.Drawing.Color.LightBlue;
+            this.ckb_ReporteAgenda.Location = new System.Drawing.Point(384, 112);
             this.ckb_ReporteAgenda.Name = "ckb_ReporteAgenda";
-            this.ckb_ReporteAgenda.Size = new System.Drawing.Size(66, 17);
+            this.ckb_ReporteAgenda.Size = new System.Drawing.Size(54, 17);
             this.ckb_ReporteAgenda.TabIndex = 56;
-            this.ckb_ReporteAgenda.Text = "Agenda ";
+            this.ckb_ReporteAgenda.Text = "Excell";
             this.ckb_ReporteAgenda.UseVisualStyleBackColor = true;
             // 
             // label10
@@ -268,25 +269,10 @@
             "Agenda-mensual",
             "Pagos-mensual ",
             "Pagos-Anual"});
-            this.cbx_Tipo_Periodo.Location = new System.Drawing.Point(204, 104);
+            this.cbx_Tipo_Periodo.Location = new System.Drawing.Point(182, 104);
             this.cbx_Tipo_Periodo.Name = "cbx_Tipo_Periodo";
             this.cbx_Tipo_Periodo.Size = new System.Drawing.Size(161, 29);
             this.cbx_Tipo_Periodo.TabIndex = 58;
-            // 
-            // cbx_Formato
-            // 
-            this.cbx_Formato.BackColor = System.Drawing.Color.LightBlue;
-            this.cbx_Formato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbx_Formato.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cbx_Formato.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cbx_Formato.FormattingEnabled = true;
-            this.cbx_Formato.Items.AddRange(new object[] {
-            "PDF",
-            "Excell"});
-            this.cbx_Formato.Location = new System.Drawing.Point(401, 104);
-            this.cbx_Formato.Name = "cbx_Formato";
-            this.cbx_Formato.Size = new System.Drawing.Size(128, 29);
-            this.cbx_Formato.TabIndex = 59;
             // 
             // cbx_MesReporte
             // 
@@ -308,7 +294,7 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cbx_MesReporte.Location = new System.Drawing.Point(204, 201);
+            this.cbx_MesReporte.Location = new System.Drawing.Point(197, 202);
             this.cbx_MesReporte.Name = "cbx_MesReporte";
             this.cbx_MesReporte.Size = new System.Drawing.Size(138, 29);
             this.cbx_MesReporte.TabIndex = 60;
@@ -319,7 +305,7 @@
             this.txt_SemanaReporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_SemanaReporte.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_SemanaReporte.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txt_SemanaReporte.Location = new System.Drawing.Point(413, 199);
+            this.txt_SemanaReporte.Location = new System.Drawing.Point(404, 200);
             this.txt_SemanaReporte.Multiline = true;
             this.txt_SemanaReporte.Name = "txt_SemanaReporte";
             this.txt_SemanaReporte.Size = new System.Drawing.Size(97, 30);
@@ -328,7 +314,7 @@
             // 
             // dtp_FechaReporte
             // 
-            this.dtp_FechaReporte.Location = new System.Drawing.Point(57, 302);
+            this.dtp_FechaReporte.Location = new System.Drawing.Point(43, 302);
             this.dtp_FechaReporte.Name = "dtp_FechaReporte";
             this.dtp_FechaReporte.Size = new System.Drawing.Size(200, 20);
             this.dtp_FechaReporte.TabIndex = 62;
@@ -353,7 +339,7 @@
             this.btn_Ruta_Archivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ruta_Archivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ruta_Archivo.Image = global::FISCLINGEST.Properties.Resources.Icon_Exportar_Reporte;
-            this.btn_Ruta_Archivo.Location = new System.Drawing.Point(257, 399);
+            this.btn_Ruta_Archivo.Location = new System.Drawing.Point(255, 391);
             this.btn_Ruta_Archivo.Name = "btn_Ruta_Archivo";
             this.btn_Ruta_Archivo.Size = new System.Drawing.Size(35, 40);
             this.btn_Ruta_Archivo.TabIndex = 63;
@@ -364,18 +350,43 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.SkyBlue;
+            this.radioButton1.Location = new System.Drawing.Point(24, 116);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(62, 17);
+            this.radioButton1.TabIndex = 65;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Agenda";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.Color.LightBlue;
+            this.radioButton2.Location = new System.Drawing.Point(101, 116);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(55, 17);
+            this.radioButton2.TabIndex = 66;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Pagos";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // Exportar_Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(550, 500);
+            this.ClientSize = new System.Drawing.Size(540, 500);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.txt_AutorReporte);
             this.Controls.Add(this.btn_Ruta_Archivo);
             this.Controls.Add(this.dtp_FechaReporte);
             this.Controls.Add(this.txt_SemanaReporte);
             this.Controls.Add(this.cbx_MesReporte);
-            this.Controls.Add(this.cbx_Formato);
             this.Controls.Add(this.cbx_Tipo_Periodo);
             this.Controls.Add(this.ckb_ReportePagos);
             this.Controls.Add(this.ckb_ReporteAgenda);
@@ -427,12 +438,13 @@
         private System.Windows.Forms.CheckBox ckb_ReporteAgenda;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbx_Tipo_Periodo;
-        private System.Windows.Forms.ComboBox cbx_Formato;
         private System.Windows.Forms.ComboBox cbx_MesReporte;
         private System.Windows.Forms.TextBox txt_SemanaReporte;
         private System.Windows.Forms.DateTimePicker dtp_FechaReporte;
         private System.Windows.Forms.Button btn_Ruta_Archivo;
         private System.Windows.Forms.TextBox txt_AutorReporte;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

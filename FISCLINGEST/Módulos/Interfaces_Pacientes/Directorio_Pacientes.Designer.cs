@@ -41,7 +41,8 @@
             // 
             // textBox5
             // 
-            this.textBox5.Enabled = false;
+            this.textBox5.AcceptsTab = true;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Location = new System.Drawing.Point(242, 127);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(505, 20);
@@ -140,6 +141,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackgroundImage = global::FISCLINGEST.Properties.Resources.Icon_Cert_fisioterapia;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1034, 566);
             this.Controls.Add(this.btn_EliminarPaciente);
             this.Controls.Add(this.btn_VerHistorialClinico);
@@ -149,6 +152,7 @@
             this.Controls.Add(this.btn_EditarPaciente);
             this.Controls.Add(this.dgv_directorio);
             this.Controls.Add(this.btn_AgregarPaciente);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Directorio_Pacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

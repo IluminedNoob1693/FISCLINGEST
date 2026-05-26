@@ -30,13 +30,14 @@ namespace FISCLINGEST.Módulos.Interfaces_Administracion.Interfaces_Usuarios
 
         private void btn_AgregarUsuario_Click(object sender, EventArgs e)
         {
-            Form AgregarUsuario = new Módulos.Interfaces_Usuarios.Agregar_Usuario();
+            Form AgregarUsuario = new Módulos.Interfaces_Usuarios.Agregar_Usuario(1);
             AgregarUsuario.ShowDialog();
         }
 
         private void btn_EditarUsuario_Click(object sender, EventArgs e)
         {
-
+            Form EditarUsuario = new Módulos.Interfaces_Usuarios.Agregar_Usuario(2);
+            EditarUsuario.ShowDialog();
         }
         private void btn_DesactivarUsuario_Click(object sender, EventArgs e)
         {

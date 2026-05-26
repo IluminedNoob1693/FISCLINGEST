@@ -31,13 +31,14 @@ namespace FISCLINGEST
 
         private void btn_AgregarCuota_Click(object sender, EventArgs e)
         {
-            Form agregarCuota = new Agregar_Cuota();
+            Form agregarCuota = new Agregar_Cuota(1);
             agregarCuota.ShowDialog();
         }
 
         private void btn_EditarCuota_Click(object sender, EventArgs e)
         {
-
+            Form editarCuota = new Agregar_Cuota(2);
+            editarCuota.ShowDialog();
         }
 
         private void btn_AnularCuota_Click(object sender, EventArgs e)

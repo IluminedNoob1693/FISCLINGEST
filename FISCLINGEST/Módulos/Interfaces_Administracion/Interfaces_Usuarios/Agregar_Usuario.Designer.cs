@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel_TituloAgregarUsuario = new System.Windows.Forms.Panel();
+            this.lbl_AgregarUsuario = new System.Windows.Forms.Label();
             this.pbx_CerrarAgregarUsuario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cerrar_AgregarPaciente = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_EditarUsuario = new System.Windows.Forms.Label();
             this.btn_Cerrar_loguin = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_NomCompletoUser = new System.Windows.Forms.TextBox();
@@ -40,12 +41,12 @@
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Password = new System.Windows.Forms.TextBox();
-            this.cbx_User_Rol = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ckb_EstadoUserActivo = new System.Windows.Forms.CheckBox();
-            this.ckb_EstadoUserInactivo = new System.Windows.Forms.CheckBox();
             this.btn_ValidarUsuarioNuevo = new System.Windows.Forms.Button();
+            this.rdb_EstadoUserActivo = new System.Windows.Forms.RadioButton();
+            this.rdb_EstadoUserInactivo = new System.Windows.Forms.RadioButton();
+            this.cbx_User_Rol = new System.Windows.Forms.ComboBox();
             this.panel_TituloAgregarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_CerrarAgregarUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,17 +57,29 @@
             // panel_TituloAgregarUsuario
             // 
             this.panel_TituloAgregarUsuario.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_TituloAgregarUsuario.Controls.Add(this.lbl_AgregarUsuario);
             this.panel_TituloAgregarUsuario.Controls.Add(this.pbx_CerrarAgregarUsuario);
             this.panel_TituloAgregarUsuario.Controls.Add(this.pictureBox1);
             this.panel_TituloAgregarUsuario.Controls.Add(this.Cerrar_AgregarPaciente);
-            this.panel_TituloAgregarUsuario.Controls.Add(this.label8);
+            this.panel_TituloAgregarUsuario.Controls.Add(this.lbl_EditarUsuario);
             this.panel_TituloAgregarUsuario.Controls.Add(this.btn_Cerrar_loguin);
             this.panel_TituloAgregarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TituloAgregarUsuario.Location = new System.Drawing.Point(0, 0);
             this.panel_TituloAgregarUsuario.Name = "panel_TituloAgregarUsuario";
-            this.panel_TituloAgregarUsuario.Size = new System.Drawing.Size(330, 46);
+            this.panel_TituloAgregarUsuario.Size = new System.Drawing.Size(320, 46);
             this.panel_TituloAgregarUsuario.TabIndex = 3;
             this.panel_TituloAgregarUsuario.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_TituloAgregarUsuario_MouseDown);
+            // 
+            // lbl_AgregarUsuario
+            // 
+            this.lbl_AgregarUsuario.AutoSize = true;
+            this.lbl_AgregarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_AgregarUsuario.Location = new System.Drawing.Point(50, 12);
+            this.lbl_AgregarUsuario.Name = "lbl_AgregarUsuario";
+            this.lbl_AgregarUsuario.Size = new System.Drawing.Size(187, 19);
+            this.lbl_AgregarUsuario.TabIndex = 22;
+            this.lbl_AgregarUsuario.Text = "Agregar nuevo usuario";
             // 
             // pbx_CerrarAgregarUsuario
             // 
@@ -99,16 +112,16 @@
             this.Cerrar_AgregarPaciente.TabIndex = 17;
             this.Cerrar_AgregarPaciente.TabStop = false;
             // 
-            // label8
+            // lbl_EditarUsuario
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(54, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(187, 19);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Agregar nuevo usuario";
+            this.lbl_EditarUsuario.AutoSize = true;
+            this.lbl_EditarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EditarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_EditarUsuario.Location = new System.Drawing.Point(54, 11);
+            this.lbl_EditarUsuario.Name = "lbl_EditarUsuario";
+            this.lbl_EditarUsuario.Size = new System.Drawing.Size(183, 19);
+            this.lbl_EditarUsuario.TabIndex = 16;
+            this.lbl_EditarUsuario.Text = "Editar usuario existente";
             // 
             // btn_Cerrar_loguin
             // 
@@ -194,21 +207,6 @@
             this.txt_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Password.UseSystemPasswordChar = true;
             // 
-            // cbx_User_Rol
-            // 
-            this.cbx_User_Rol.BackColor = System.Drawing.Color.LightBlue;
-            this.cbx_User_Rol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbx_User_Rol.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cbx_User_Rol.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.cbx_User_Rol.FormattingEnabled = true;
-            this.cbx_User_Rol.Items.AddRange(new object[] {
-            "Encargado",
-            "Enfermero"});
-            this.cbx_User_Rol.Location = new System.Drawing.Point(18, 319);
-            this.cbx_User_Rol.Name = "cbx_User_Rol";
-            this.cbx_User_Rol.Size = new System.Drawing.Size(128, 29);
-            this.cbx_User_Rol.TabIndex = 48;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -231,28 +229,6 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Estado:";
             // 
-            // ckb_EstadoUserActivo
-            // 
-            this.ckb_EstadoUserActivo.AutoSize = true;
-            this.ckb_EstadoUserActivo.FlatAppearance.BorderSize = 0;
-            this.ckb_EstadoUserActivo.Location = new System.Drawing.Point(173, 330);
-            this.ckb_EstadoUserActivo.Name = "ckb_EstadoUserActivo";
-            this.ckb_EstadoUserActivo.Size = new System.Drawing.Size(56, 17);
-            this.ckb_EstadoUserActivo.TabIndex = 51;
-            this.ckb_EstadoUserActivo.Text = "Activo";
-            this.ckb_EstadoUserActivo.UseVisualStyleBackColor = true;
-            // 
-            // ckb_EstadoUserInactivo
-            // 
-            this.ckb_EstadoUserInactivo.AutoSize = true;
-            this.ckb_EstadoUserInactivo.FlatAppearance.BorderSize = 0;
-            this.ckb_EstadoUserInactivo.Location = new System.Drawing.Point(244, 330);
-            this.ckb_EstadoUserInactivo.Name = "ckb_EstadoUserInactivo";
-            this.ckb_EstadoUserInactivo.Size = new System.Drawing.Size(64, 17);
-            this.ckb_EstadoUserInactivo.TabIndex = 52;
-            this.ckb_EstadoUserInactivo.Text = "Inactivo";
-            this.ckb_EstadoUserInactivo.UseVisualStyleBackColor = true;
-            // 
             // btn_ValidarUsuarioNuevo
             // 
             this.btn_ValidarUsuarioNuevo.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -269,16 +245,53 @@
             this.btn_ValidarUsuarioNuevo.UseVisualStyleBackColor = false;
             this.btn_ValidarUsuarioNuevo.Click += new System.EventHandler(this.btn_ValidarUsuarioNuevo_Click);
             // 
+            // rdb_EstadoUserActivo
+            // 
+            this.rdb_EstadoUserActivo.AutoSize = true;
+            this.rdb_EstadoUserActivo.Location = new System.Drawing.Point(173, 326);
+            this.rdb_EstadoUserActivo.Name = "rdb_EstadoUserActivo";
+            this.rdb_EstadoUserActivo.Size = new System.Drawing.Size(55, 17);
+            this.rdb_EstadoUserActivo.TabIndex = 54;
+            this.rdb_EstadoUserActivo.TabStop = true;
+            this.rdb_EstadoUserActivo.Text = "Activo";
+            this.rdb_EstadoUserActivo.UseVisualStyleBackColor = true;
+            // 
+            // rdb_EstadoUserInactivo
+            // 
+            this.rdb_EstadoUserInactivo.AutoSize = true;
+            this.rdb_EstadoUserInactivo.Location = new System.Drawing.Point(234, 326);
+            this.rdb_EstadoUserInactivo.Name = "rdb_EstadoUserInactivo";
+            this.rdb_EstadoUserInactivo.Size = new System.Drawing.Size(63, 17);
+            this.rdb_EstadoUserInactivo.TabIndex = 55;
+            this.rdb_EstadoUserInactivo.TabStop = true;
+            this.rdb_EstadoUserInactivo.Text = "Inactivo";
+            this.rdb_EstadoUserInactivo.UseVisualStyleBackColor = true;
+            // 
+            // cbx_User_Rol
+            // 
+            this.cbx_User_Rol.BackColor = System.Drawing.Color.LightBlue;
+            this.cbx_User_Rol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbx_User_Rol.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbx_User_Rol.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.cbx_User_Rol.FormattingEnabled = true;
+            this.cbx_User_Rol.Items.AddRange(new object[] {
+            "Encargado",
+            "Enfermero"});
+            this.cbx_User_Rol.Location = new System.Drawing.Point(18, 319);
+            this.cbx_User_Rol.Name = "cbx_User_Rol";
+            this.cbx_User_Rol.Size = new System.Drawing.Size(128, 29);
+            this.cbx_User_Rol.TabIndex = 48;
+            // 
             // Agregar_Usuario
             // 
             this.AcceptButton = this.btn_ValidarUsuarioNuevo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(330, 440);
+            this.ClientSize = new System.Drawing.Size(320, 440);
+            this.Controls.Add(this.rdb_EstadoUserInactivo);
+            this.Controls.Add(this.rdb_EstadoUserActivo);
             this.Controls.Add(this.btn_ValidarUsuarioNuevo);
-            this.Controls.Add(this.ckb_EstadoUserInactivo);
-            this.Controls.Add(this.ckb_EstadoUserActivo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbx_User_Rol);
@@ -310,7 +323,7 @@
 
         private System.Windows.Forms.Panel panel_TituloAgregarUsuario;
         private System.Windows.Forms.PictureBox Cerrar_AgregarPaciente;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_EditarUsuario;
         private System.Windows.Forms.PictureBox btn_Cerrar_loguin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
@@ -319,12 +332,13 @@
         private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_Password;
-        private System.Windows.Forms.ComboBox cbx_User_Rol;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox ckb_EstadoUserActivo;
-        private System.Windows.Forms.CheckBox ckb_EstadoUserInactivo;
         private System.Windows.Forms.Button btn_ValidarUsuarioNuevo;
         private System.Windows.Forms.PictureBox pbx_CerrarAgregarUsuario;
+        private System.Windows.Forms.Label lbl_AgregarUsuario;
+        private System.Windows.Forms.RadioButton rdb_EstadoUserActivo;
+        private System.Windows.Forms.RadioButton rdb_EstadoUserInactivo;
+        private System.Windows.Forms.ComboBox cbx_User_Rol;
     }
 }

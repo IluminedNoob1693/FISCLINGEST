@@ -31,13 +31,14 @@ namespace FISCLINGEST.Módulos.Interfaces_Pacientes.Lista_de_espera
 
         private void btn_AgregarListEspera_Click(object sender, EventArgs e)
         {
-            Form Agregar_ListaEspera = new Agregar_ListEspera();
+            Form Agregar_ListaEspera = new Agregar_ListEspera(1);
             Agregar_ListaEspera.ShowDialog();
         }
 
         private void btn_EditarListEspera_Click(object sender, EventArgs e)
         {
-
+            Form Editar_ListaEspera = new Agregar_ListEspera(2);
+            Editar_ListaEspera.ShowDialog();
         }
 
         private void btn_EliminarPaciente_Click(object sender, EventArgs e)

@@ -41,6 +41,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbx_ConsultarEstadoCita = new System.Windows.Forms.ComboBox();
             this.btn_ConsultarCitas = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel_TituloConsultarCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_CerrarConsultaCita)).BeginInit();
@@ -59,7 +63,7 @@
             this.panel_TituloConsultarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TituloConsultarCita.Location = new System.Drawing.Point(0, 0);
             this.panel_TituloConsultarCita.Name = "panel_TituloConsultarCita";
-            this.panel_TituloConsultarCita.Size = new System.Drawing.Size(255, 46);
+            this.panel_TituloConsultarCita.Size = new System.Drawing.Size(370, 46);
             this.panel_TituloConsultarCita.TabIndex = 3;
             this.panel_TituloConsultarCita.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_TituloConsultarCita_MouseDown);
             // 
@@ -76,7 +80,7 @@
             // pbx_CerrarConsultaCita
             // 
             this.pbx_CerrarConsultaCita.Image = global::FISCLINGEST.Properties.Resources.icon_cerrar1;
-            this.pbx_CerrarConsultaCita.Location = new System.Drawing.Point(225, 10);
+            this.pbx_CerrarConsultaCita.Location = new System.Drawing.Point(340, 12);
             this.pbx_CerrarConsultaCita.Name = "pbx_CerrarConsultaCita";
             this.pbx_CerrarConsultaCita.Size = new System.Drawing.Size(18, 18);
             this.pbx_CerrarConsultaCita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +103,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(49, 10);
+            this.label8.Location = new System.Drawing.Point(66, 12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 19);
             this.label8.TabIndex = 16;
@@ -117,9 +121,9 @@
             // 
             // dtp_FechaHora_Entrada
             // 
-            this.dtp_FechaHora_Entrada.Location = new System.Drawing.Point(11, 96);
+            this.dtp_FechaHora_Entrada.Location = new System.Drawing.Point(19, 101);
             this.dtp_FechaHora_Entrada.Name = "dtp_FechaHora_Entrada";
-            this.dtp_FechaHora_Entrada.Size = new System.Drawing.Size(232, 20);
+            this.dtp_FechaHora_Entrada.Size = new System.Drawing.Size(200, 20);
             this.dtp_FechaHora_Entrada.TabIndex = 4;
             // 
             // label10
@@ -127,28 +131,28 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(2, 60);
+            this.label10.Location = new System.Drawing.Point(56, 66);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(253, 21);
+            this.label10.Size = new System.Drawing.Size(110, 21);
             this.label10.TabIndex = 36;
-            this.label10.Text = "Seleccionar fecha y hora inicial:";
+            this.label10.Text = "Fecha inicial:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(2, 136);
+            this.label1.Location = new System.Drawing.Point(70, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 21);
+            this.label1.Size = new System.Drawing.Size(99, 21);
             this.label1.TabIndex = 38;
-            this.label1.Text = "Seleccionar fecha y hora final:\r\n";
+            this.label1.Text = "Fecha final:\r\n";
             // 
             // dtp_FechaHora_Salida
             // 
-            this.dtp_FechaHora_Salida.Location = new System.Drawing.Point(11, 172);
+            this.dtp_FechaHora_Salida.Location = new System.Drawing.Point(22, 172);
             this.dtp_FechaHora_Salida.Name = "dtp_FechaHora_Salida";
-            this.dtp_FechaHora_Salida.Size = new System.Drawing.Size(232, 20);
+            this.dtp_FechaHora_Salida.Size = new System.Drawing.Size(202, 20);
             this.dtp_FechaHora_Salida.TabIndex = 37;
             // 
             // label2
@@ -156,11 +160,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(7, 212);
+            this.label2.Location = new System.Drawing.Point(38, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 21);
+            this.label2.Size = new System.Drawing.Size(150, 21);
             this.label2.TabIndex = 41;
-            this.label2.Text = "Estado cita:";
+            this.label2.Text = "Estado  de la cita:";
             // 
             // cbx_ConsultarEstadoCita
             // 
@@ -172,7 +176,7 @@
             "Activa",
             "Reprogramada",
             "Cancelada"});
-            this.cbx_ConsultarEstadoCita.Location = new System.Drawing.Point(116, 210);
+            this.cbx_ConsultarEstadoCita.Location = new System.Drawing.Point(194, 212);
             this.cbx_ConsultarEstadoCita.Name = "cbx_ConsultarEstadoCita";
             this.cbx_ConsultarEstadoCita.Size = new System.Drawing.Size(128, 28);
             this.cbx_ConsultarEstadoCita.TabIndex = 40;
@@ -184,7 +188,7 @@
             this.btn_ConsultarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarCitas.Font = new System.Drawing.Font("Futura Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConsultarCitas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_ConsultarCitas.Location = new System.Drawing.Point(70, 256);
+            this.btn_ConsultarCitas.Location = new System.Drawing.Point(125, 256);
             this.btn_ConsultarCitas.Name = "btn_ConsultarCitas";
             this.btn_ConsultarCitas.Size = new System.Drawing.Size(99, 32);
             this.btn_ConsultarCitas.TabIndex = 42;
@@ -192,12 +196,55 @@
             this.btn_ConsultarCitas.UseVisualStyleBackColor = false;
             this.btn_ConsultarCitas.Click += new System.EventHandler(this.btn_ConsultarCitas_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(247, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 21);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Hora inicial:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(250, 101);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
+            this.dateTimePicker1.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(258, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 21);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Hora final:";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(250, 172);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(95, 20);
+            this.dateTimePicker2.TabIndex = 46;
+            // 
             // Consultar_Agenda
             // 
+            this.AcceptButton = this.btn_ConsultarCitas;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(255, 300);
+            this.ClientSize = new System.Drawing.Size(370, 300);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_ConsultarCitas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbx_ConsultarEstadoCita);
@@ -208,6 +255,7 @@
             this.Controls.Add(this.panel_TituloConsultarCita);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_Agenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exportar_Agenda";
             this.Load += new System.EventHandler(this.Consultar_Agenda_Load);
             this.panel_TituloConsultarCita.ResumeLayout(false);
@@ -236,5 +284,9 @@
         private System.Windows.Forms.Button btn_ConsultarCitas;
         private System.Windows.Forms.PictureBox pbx_CerrarConsultaCita;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

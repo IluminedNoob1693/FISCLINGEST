@@ -24,25 +24,30 @@ namespace FISCLINGEST.Módulos.Interfaces_Pacientes
             int nWidthEllipse, // ancho de la elipse
             int nHeightEllipse // alto de la elipse
         );
-        public Directorio_Pacientes()
+        public Directorio_Pacientes(Agregar_Paciente agregar_Paciente)
         {
             InitializeComponent();
         }
 
         private void btn_AgregarPaciente_Click(object sender, EventArgs e)
         {
-            Form AgregarPaciente = new Agregar_Paciente();
+            Form AgregarPaciente = new Agregar_Paciente(1);
             AgregarPaciente.ShowDialog();
         }
 
         private void btn_EditarPaciente_Click(object sender, EventArgs e)
         {
-
+          Form EditarPaciente = new Agregar_Paciente(2);
+            EditarPaciente.ShowDialog();
+            
         }
 
         private void btn_EliminarPaciente_Click(object sender, EventArgs e)
         {
-
+            /*Form EliminarPaciente = new Msg_Advertencia();
+            ((Msg_Advertencia)EliminarPaciente).TituloAdvertencia = "Eliminar Paciente";
+            ((Msg_Advertencia)EliminarPaciente).MensajeAdvertencia = "¿Está seguro de que desea eliminar este paciente?";
+            EliminarPaciente.ShowDialog();*/
         }
 
         private void btn_VerHistorialClinico_Click(object sender, EventArgs e)

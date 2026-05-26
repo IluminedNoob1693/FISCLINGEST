@@ -23,16 +23,33 @@ namespace FISCLINGEST.Módulos.Interfaces_Pacientes
             int nWidthEllipse, // ancho de la elipse
             int nHeightEllipse // alto de la elipse
         );
-        public Agregar_Paciente()
+        public Agregar_Paciente(int tituloPaciente)
         {
             InitializeComponent();
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             this.Load += Agregar_Paciente_Load;
+
+            //Cambiar título del formulario y visibilidad de etiquetas según el valor de tituloPaciente
+            if (tituloPaciente == 1)
+            {
+                lbl_AgregarPaciente.Visible = true;  // Mostrar primera
+                lbl_EditarPaciente.Visible = false; // Ocultar segunda
+            }
+            else
+            {
+                lbl_AgregarPaciente.Visible = false; // Ocultar primera
+                lbl_EditarPaciente.Visible = true;  // Mostrar segunda
+            }
+        }
+
+        public Agregar_Paciente()
+        {
+
         }
 
         private void btn_ValidarUsuario_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_AgregarHistorial_Click(object sender, EventArgs e)

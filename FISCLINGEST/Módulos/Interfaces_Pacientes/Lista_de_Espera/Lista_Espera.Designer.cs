@@ -125,6 +125,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FISCLINGEST.Properties.Resources.Icon_Cert_fisioterapia;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1034, 566);
             this.Controls.Add(this.btn_EliminarPaciente);
             this.Controls.Add(this.textBox5);
@@ -135,6 +137,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Lista_Espera";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Lista_Espera";
             this.Load += new System.EventHandler(this.Lista_Espera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_directorio)).EndInit();

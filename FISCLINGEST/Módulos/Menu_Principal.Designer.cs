@@ -30,30 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Principal));
             this.Menu_Vertical = new System.Windows.Forms.Panel();
-            this.btn_CerrarSesion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.logo_menu = new System.Windows.Forms.PictureBox();
-            this.btn_Administracion = new System.Windows.Forms.Button();
-            this.btn_Citas = new System.Windows.Forms.Button();
-            this.btn_Cuotas = new System.Windows.Forms.Button();
-            this.btn_Pacientes = new System.Windows.Forms.Button();
             this.Barra_Título = new System.Windows.Forms.Panel();
+            this.Panel_contenedor = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.btn_Maximizar = new System.Windows.Forms.PictureBox();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_Contraer = new System.Windows.Forms.PictureBox();
-            this.lb_Usuario = new System.Windows.Forms.Label();
-            this.Panel_contenedor = new System.Windows.Forms.Panel();
+            this.btn_CerrarSesion = new System.Windows.Forms.Button();
+            this.logo_menu = new System.Windows.Forms.PictureBox();
+            this.btn_Administracion = new System.Windows.Forms.Button();
+            this.btn_Citas = new System.Windows.Forms.Button();
+            this.btn_Cuotas = new System.Windows.Forms.Button();
+            this.btn_Pacientes = new System.Windows.Forms.Button();
             this.Menu_Vertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_menu)).BeginInit();
             this.Barra_Título.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Contraer)).BeginInit();
-            this.Panel_contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_menu)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_Vertical
@@ -72,29 +70,116 @@
             this.Menu_Vertical.Size = new System.Drawing.Size(250, 611);
             this.Menu_Vertical.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(52, 562);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Cerrar sesión";
+            // 
+            // Barra_Título
+            // 
+            this.Barra_Título.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Barra_Título.Controls.Add(this.btn_minimizar);
+            this.Barra_Título.Controls.Add(this.btn_Cerrar);
+            this.Barra_Título.Controls.Add(this.btn_Maximizar);
+            this.Barra_Título.Controls.Add(this.btn_restaurar);
+            this.Barra_Título.Controls.Add(this.btn_Contraer);
+            this.Barra_Título.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Barra_Título.Location = new System.Drawing.Point(250, 0);
+            this.Barra_Título.Name = "Barra_Título";
+            this.Barra_Título.Size = new System.Drawing.Size(1034, 45);
+            this.Barra_Título.TabIndex = 1;
+            this.Barra_Título.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barra_Título_MouseDown);
+            // 
+            // Panel_contenedor
+            // 
+            this.Panel_contenedor.BackColor = System.Drawing.Color.White;
+            this.Panel_contenedor.BackgroundImage = global::FISCLINGEST.Properties.Resources.Icon_Cert_fisioterapia;
+            this.Panel_contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_contenedor.Location = new System.Drawing.Point(250, 45);
+            this.Panel_contenedor.Name = "Panel_contenedor";
+            this.Panel_contenedor.Size = new System.Drawing.Size(1034, 566);
+            this.Panel_contenedor.TabIndex = 2;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimizar.Image = global::FISCLINGEST.Properties.Resources.minimizar_Icon;
+            this.btn_minimizar.Location = new System.Drawing.Point(958, 12);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(18, 18);
+            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_minimizar.TabIndex = 8;
+            this.btn_minimizar.TabStop = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
+            // 
+            // btn_Cerrar
+            // 
+            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cerrar.Image = global::FISCLINGEST.Properties.Resources.icon_cerrar;
+            this.btn_Cerrar.Location = new System.Drawing.Point(1006, 12);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(18, 18);
+            this.btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Cerrar.TabIndex = 7;
+            this.btn_Cerrar.TabStop = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            // 
+            // btn_Maximizar
+            // 
+            this.btn_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Maximizar.Image = global::FISCLINGEST.Properties.Resources.icon_maximizar1;
+            this.btn_Maximizar.Location = new System.Drawing.Point(982, 12);
+            this.btn_Maximizar.Name = "btn_Maximizar";
+            this.btn_Maximizar.Size = new System.Drawing.Size(18, 18);
+            this.btn_Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Maximizar.TabIndex = 6;
+            this.btn_Maximizar.TabStop = false;
+            this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_restaurar.Image = global::FISCLINGEST.Properties.Resources.icon_restaurar;
+            this.btn_restaurar.Location = new System.Drawing.Point(982, 12);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(18, 18);
+            this.btn_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_restaurar.TabIndex = 5;
+            this.btn_restaurar.TabStop = false;
+            this.btn_restaurar.Visible = false;
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
+            // 
+            // btn_Contraer
+            // 
+            this.btn_Contraer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Contraer.Image = global::FISCLINGEST.Properties.Resources.Mobile_Menu_Icon;
+            this.btn_Contraer.Location = new System.Drawing.Point(6, 4);
+            this.btn_Contraer.Name = "btn_Contraer";
+            this.btn_Contraer.Size = new System.Drawing.Size(35, 35);
+            this.btn_Contraer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Contraer.TabIndex = 4;
+            this.btn_Contraer.TabStop = false;
+            this.btn_Contraer.Click += new System.EventHandler(this.btn_Contraer_Click);
+            // 
             // btn_CerrarSesion
             // 
             this.btn_CerrarSesion.BackColor = System.Drawing.Color.Maroon;
             this.btn_CerrarSesion.FlatAppearance.BorderSize = 0;
             this.btn_CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CerrarSesion.Image = global::FISCLINGEST.Properties.Resources.Icon_cerrar_sesion;
-            this.btn_CerrarSesion.Location = new System.Drawing.Point(77, 371);
+            this.btn_CerrarSesion.Location = new System.Drawing.Point(77, 473);
             this.btn_CerrarSesion.Name = "btn_CerrarSesion";
             this.btn_CerrarSesion.Size = new System.Drawing.Size(90, 86);
             this.btn_CerrarSesion.TabIndex = 4;
             this.btn_CerrarSesion.UseVisualStyleBackColor = false;
             this.btn_CerrarSesion.Click += new System.EventHandler(this.btn_CerrarSesion_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(52, 460);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Cerrar sesión";
             // 
             // logo_menu
             // 
@@ -178,101 +263,6 @@
             this.btn_Pacientes.UseVisualStyleBackColor = false;
             this.btn_Pacientes.Click += new System.EventHandler(this.btn_Pacientes_Click);
             // 
-            // Barra_Título
-            // 
-            this.Barra_Título.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Barra_Título.Controls.Add(this.btn_minimizar);
-            this.Barra_Título.Controls.Add(this.btn_Cerrar);
-            this.Barra_Título.Controls.Add(this.btn_Maximizar);
-            this.Barra_Título.Controls.Add(this.btn_restaurar);
-            this.Barra_Título.Controls.Add(this.btn_Contraer);
-            this.Barra_Título.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Barra_Título.Location = new System.Drawing.Point(250, 0);
-            this.Barra_Título.Name = "Barra_Título";
-            this.Barra_Título.Size = new System.Drawing.Size(1034, 45);
-            this.Barra_Título.TabIndex = 1;
-            this.Barra_Título.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barra_Título_MouseDown);
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_minimizar.Image = global::FISCLINGEST.Properties.Resources.minimizar_Icon;
-            this.btn_minimizar.Location = new System.Drawing.Point(958, 12);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(18, 18);
-            this.btn_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_minimizar.TabIndex = 8;
-            this.btn_minimizar.TabStop = false;
-            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
-            // 
-            // btn_Cerrar
-            // 
-            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cerrar.Image = global::FISCLINGEST.Properties.Resources.icon_cerrar;
-            this.btn_Cerrar.Location = new System.Drawing.Point(1006, 12);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(18, 18);
-            this.btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Cerrar.TabIndex = 7;
-            this.btn_Cerrar.TabStop = false;
-            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
-            // 
-            // btn_Maximizar
-            // 
-            this.btn_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Maximizar.Image = global::FISCLINGEST.Properties.Resources.icon_maximizar1;
-            this.btn_Maximizar.Location = new System.Drawing.Point(982, 12);
-            this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(18, 18);
-            this.btn_Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Maximizar.TabIndex = 6;
-            this.btn_Maximizar.TabStop = false;
-            this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
-            // 
-            // btn_restaurar
-            // 
-            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_restaurar.Image = global::FISCLINGEST.Properties.Resources.icon_restaurar;
-            this.btn_restaurar.Location = new System.Drawing.Point(982, 12);
-            this.btn_restaurar.Name = "btn_restaurar";
-            this.btn_restaurar.Size = new System.Drawing.Size(18, 18);
-            this.btn_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_restaurar.TabIndex = 5;
-            this.btn_restaurar.TabStop = false;
-            this.btn_restaurar.Visible = false;
-            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
-            // 
-            // btn_Contraer
-            // 
-            this.btn_Contraer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Contraer.Image = global::FISCLINGEST.Properties.Resources.Mobile_Menu_Icon;
-            this.btn_Contraer.Location = new System.Drawing.Point(6, 4);
-            this.btn_Contraer.Name = "btn_Contraer";
-            this.btn_Contraer.Size = new System.Drawing.Size(35, 35);
-            this.btn_Contraer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Contraer.TabIndex = 4;
-            this.btn_Contraer.TabStop = false;
-            this.btn_Contraer.Click += new System.EventHandler(this.btn_Contraer_Click);
-            // 
-            // lb_Usuario
-            // 
-            this.lb_Usuario.AutoSize = true;
-            this.lb_Usuario.Font = new System.Drawing.Font("Swis721 Hv BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Usuario.Location = new System.Drawing.Point(441, 96);
-            this.lb_Usuario.Name = "lb_Usuario";
-            this.lb_Usuario.Size = new System.Drawing.Size(0, 25);
-            this.lb_Usuario.TabIndex = 3;
-            // 
-            // Panel_contenedor
-            // 
-            this.Panel_contenedor.BackColor = System.Drawing.Color.White;
-            this.Panel_contenedor.Controls.Add(this.lb_Usuario);
-            this.Panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_contenedor.Location = new System.Drawing.Point(250, 45);
-            this.Panel_contenedor.Name = "Panel_contenedor";
-            this.Panel_contenedor.Size = new System.Drawing.Size(1034, 566);
-            this.Panel_contenedor.TabIndex = 2;
-            // 
             // Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,15 +280,13 @@
             this.Load += new System.EventHandler(this.Menu_Principal_Load);
             this.Menu_Vertical.ResumeLayout(false);
             this.Menu_Vertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_menu)).EndInit();
             this.Barra_Título.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Contraer)).EndInit();
-            this.Panel_contenedor.ResumeLayout(false);
-            this.Panel_contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_menu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,7 +305,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btn_Maximizar;
         private System.Windows.Forms.PictureBox btn_Cerrar;
-        private System.Windows.Forms.Label lb_Usuario;
         private System.Windows.Forms.Panel Panel_contenedor;
         private System.Windows.Forms.PictureBox btn_minimizar;
         private System.Windows.Forms.Button btn_CerrarSesion;

@@ -49,6 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CitasService.cs" />
+    <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
+    <Compile Include="Msg_Advertencia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Msg_Advertencia.Designer.cs">
+      <DependentUpon>Msg_Advertencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Msg_Error.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Msg_Error.Designer.cs">
+      <DependentUpon>Msg_Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="msg_Exito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="msg_Exito.Designer.cs">
+      <DependentUpon>msg_Exito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Módulos\Interfaces_Administracion\Exportar_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,12 +105,6 @@
     <Compile Include="Módulos\Interfaces_Citas\Consultar_Agenda.Designer.cs">
       <DependentUpon>Consultar_Agenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Módulos\Interfaces_Citas\Reprogramar_Cita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Módulos\Interfaces_Citas\Reprogramar_Cita.Designer.cs">
-      <DependentUpon>Reprogramar_Cita.cs</DependentUpon>
-    </Compile>
     <Compile Include="Módulos\Interfaces_Pacientes\Agregar_Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,18 +116,6 @@
     </Compile>
     <Compile Include="Módulos\Interfaces_Pacientes\Directorio_Pacientes.Designer.cs">
       <DependentUpon>Directorio_Pacientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Módulos\Interfaces_Pacientes\Editar_Paciente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Módulos\Interfaces_Pacientes\Editar_Paciente.Designer.cs">
-      <DependentUpon>Editar_Paciente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Módulos\Interfaces_Pacientes\Eliminar_Paciente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Módulos\Interfaces_Pacientes\Eliminar_Paciente.Designer.cs">
-      <DependentUpon>Eliminar_Paciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Módulos\Interfaces_Pacientes\Lista_de_Espera\Agregar_ListaEspera.cs">
       <SubType>Form</SubType>
@@ -138,12 +140,6 @@
     </Compile>
     <Compile Include="Módulos\Interfaces_Pagos\Cuotas.Designer.cs">
       <DependentUpon>Cuotas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Módulos\Interfaces_Pagos\Editar_Cuota.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Módulos\Interfaces_Pagos\Editar_Cuota.Designer.cs">
-      <DependentUpon>Editar_Cuota.cs</DependentUpon>
     </Compile>
     <Compile Include="Módulos\Interfaces_Pagos\Consultar_Cuotas.cs">
       <SubType>Form</SubType>
@@ -189,6 +185,21 @@
     <Compile Include="Módulos\Interfaces_Administracion\Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_Dia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Dia.Designer.cs">
+      <DependentUpon>UserControl_Dia.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Msg_Advertencia.resx">
+      <DependentUpon>Msg_Advertencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Msg_Error.resx">
+      <DependentUpon>Msg_Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="msg_Exito.resx">
+      <DependentUpon>msg_Exito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Módulos\Interfaces_Administracion\Exportar_Reportes.resx">
       <DependentUpon>Exportar_Reportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,9 +242,6 @@
     <EmbeddedResource Include="Módulos\Interfaces_Pagos\Cuotas.resx">
       <DependentUpon>Cuotas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Módulos\Interfaces_Pagos\Editar_Cuota.resx">
-      <DependentUpon>Editar_Cuota.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Módulos\loguin.resx">
       <DependentUpon>loguin.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Módulos\Interfaces_Administracion\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Dia.resx">
+      <DependentUpon>UserControl_Dia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -422,6 +433,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos_Diseño\Iconospersonalizados\Citas\Icon_Exportar_Agenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos_Diseño\Iconospersonalizados\Icon_msg_advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos_Diseño\Iconospersonalizados\Icon_msg_exito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos_Diseño\Iconospersonalizados\Icon_msg_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos_Diseño\Iconospersonalizados\icon_regresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos_Diseño\Iconospersonalizados\Icon_MesAnterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos_Diseño\Iconospersonalizados\Icon_MesSiguiente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos_Diseño\Iconospersonalizados\Icon_Cert-fisioterapia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

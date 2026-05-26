@@ -34,7 +34,7 @@ namespace FISCLINGEST
 
         private void btn_Directorio_Pacientes_Click(object sender, EventArgs e)
         {
-            _menuPrincipal.AbrirFormEnPanel(new Módulos.Interfaces_Pacientes.Directorio_Pacientes());
+            _menuPrincipal.AbrirFormEnPanel(new Módulos.Interfaces_Pacientes.Directorio_Pacientes(new Módulos.Interfaces_Pacientes.Agregar_Paciente()));
 
 
         }

@@ -263,6 +263,16 @@ namespace FISCLINGEST.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Cert_fisioterapia {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Cert-fisioterapia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_crear_respaldo {
             get {
                 object obj = ResourceManager.GetObject("Icon_crear_respaldo", resourceCulture);
@@ -373,6 +383,26 @@ namespace FISCLINGEST.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_MesAnterior {
+            get {
+                object obj = ResourceManager.GetObject("Icon_MesAnterior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_MesSiguiente {
+            get {
+                object obj = ResourceManager.GetObject("Icon_MesSiguiente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_modulo_Administración {
             get {
                 object obj = ResourceManager.GetObject("Icon_modulo_Administración", resourceCulture);
@@ -406,6 +436,56 @@ namespace FISCLINGEST.Properties {
         internal static System.Drawing.Bitmap Icon_modulo_pacientes {
             get {
                 object obj = ResourceManager.GetObject("Icon_modulo_pacientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_msg_advertencia {
+            get {
+                object obj = ResourceManager.GetObject("Icon_msg_advertencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_msg_error {
+            get {
+                object obj = ResourceManager.GetObject("Icon_msg_error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_msg_exito {
+            get {
+                object obj = ResourceManager.GetObject("Icon_msg_exito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_regresar {
+            get {
+                object obj = ResourceManager.GetObject("icon_regresar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_regresar1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_regresar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

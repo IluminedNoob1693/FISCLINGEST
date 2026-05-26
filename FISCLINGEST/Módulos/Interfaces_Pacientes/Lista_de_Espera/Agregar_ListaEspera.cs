@@ -23,11 +23,27 @@ namespace FISCLINGEST.Módulos.Interfaces_Pacientes.Lista_de_Espera
             int nWidthEllipse, // ancho de la elipse
             int nHeightEllipse // alto de la elipse
         );
-        public Agregar_ListEspera()
+        public Agregar_ListEspera(int titulo_ListEspera)
         {
             InitializeComponent();
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             this.Load += Agregar_ListEspera_Load;
+
+            //Cambiar título del formulario y visibilidad de etiquetas según el valor de titulo_ListEspera
+            if (titulo_ListEspera == 1)
+            {
+                lbl_AgregarListEspera.Visible = true;  // Mostrar primera
+                lbl_EditListEspera.Visible = false; // Ocultar segunda
+            }
+            else
+            {
+                lbl_AgregarListEspera.Visible = false; // Ocultar primera
+                lbl_EditListEspera.Visible = true;  // Mostrar segunda
+            }
+        }
+
+        public Agregar_ListEspera()
+        {
         }
 
         private void btn_CerrarAgregarList_Click(object sender, EventArgs e)
@@ -69,7 +85,12 @@ namespace FISCLINGEST.Módulos.Interfaces_Pacientes.Lista_de_Espera
             txt_TelRef_ListEspera.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, txt_TelRef_ListEspera.Width, txt_TelRef_ListEspera.Height, 10, 10));
 
             //redondear combobox del turno
-            cbx_turnoListEspera.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, cbx_turnoListEspera.Width, cbx_turnoListEspera.Height, 10, 10));
+            
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

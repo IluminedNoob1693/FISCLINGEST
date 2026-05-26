@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using FISCLINGEST.Módulos.Interfaces_Citas;
 
 namespace FISCLINGEST
 {
@@ -123,6 +124,11 @@ namespace FISCLINGEST
             //Aplicar redondeo a los controles existentes
             // Redondear Botón Cerrar Sesión
             btn_CerrarSesion.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_CerrarSesion.Width, btn_CerrarSesion.Height, 15, 15));
+        }
+
+        private void btn_Regresar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

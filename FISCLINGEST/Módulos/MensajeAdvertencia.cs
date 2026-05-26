@@ -8,11 +8,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace FISCLINGEST.Módulos.Interfaces_Pagos
+namespace FISCLINGEST.Módulos.Interfaces_Pacientes
 {
-    public partial class Consultar_Cuotas : Form
+    public partial class MensajeAdvertencia : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -23,48 +22,49 @@ namespace FISCLINGEST.Módulos.Interfaces_Pagos
             int nWidthEllipse, // ancho de la elipse
             int nHeightEllipse // alto de la elipse
         );
-        public Consultar_Cuotas()
+        public MensajeAdvertencia()
         {
             InitializeComponent();
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            this.Load += Consultar_Cuotas_Load;
-        }
-
-        private void btn_CerrarConsultarCuotas_Click (object sender, EventArgs e)
-        {
-            this.Close();
+            this.Load += MensajeAdvertencia_Load;
         }
         //Para poder mover la ventana a cualquier direccion
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        private void panel_TituloConsultarCuota_MouseDown(object sender, MouseEventArgs e)
+        private void btn_CerrarAdvertencia_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void panel_TituloAdvertencia_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btn_ConsultarCuotas_Click(object sender, EventArgs e)
+        private void btn_CancelarAdvertencia_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Form Msg_Error = new Mensaje_Error();
+            Msg_Error.ShowDialog();
+        }
+        private void btn_ConfirmarAdvertencia_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form Msg_Exito = new MensajeExito();
+            Msg_Exito.ShowDialog();
         }
 
-        private void Consultar_Cuotas_Load(object sender, EventArgs e)
+        private void MensajeAdvertencia_Load(object sender, EventArgs e)
         {
             //Aplicar redondeo a los controles existentes
-            //Redondear el botón de consultar
-            btn_ConsultarCuotas.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_ConsultarCuotas.Width, btn_ConsultarCuotas.Height, 15, 15));
+            // Redondear Botón para confirmar eliminación
+            btn_ConfirmarAdvertencia.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_ConfirmarAdvertencia.Width, btn_ConfirmarAdvertencia.Height, 15, 15));
 
-            //Redondear fecha de inicio busqueda
-            cbx_MesHistorialCuotas.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, cbx_MesHistorialCuotas.Width, cbx_MesHistorialCuotas.Height, 15, 15));
-
-            //Redondear año de busqueda
-            txt_AñoHistorialCuotas.BorderStyle = BorderStyle.None; // Recomendado para textboxes redondeados
-            txt_AñoHistorialCuotas.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, txt_AñoHistorialCuotas.Width, txt_AñoHistorialCuotas.Height, 15, 15));
-
-            //Redondear estado de la cuota
-            
+            // Redondear Botón para cancelar eliminación
+            btn_CancelarAdvertencia.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_CancelarAdvertencia.Width, btn_CancelarAdvertencia.Height, 15, 15));
         }
     }
 }

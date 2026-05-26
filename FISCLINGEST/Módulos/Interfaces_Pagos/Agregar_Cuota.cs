@@ -23,11 +23,23 @@ namespace FISCLINGEST.Módulos.Interfaces_Pagos
                 int nWidthEllipse, // ancho de la elipse
                 int nHeightEllipse // alto de la elipse
             );
-        public Agregar_Cuota()
+        public Agregar_Cuota(int tituloCuota)
         {
             InitializeComponent();
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             this.Load += Agregar_Cuota_Load;
+
+         //Cambiar título del formulario y visibilidad de etiquetas según el valor de tituloCuota
+            if (tituloCuota == 1)
+            {
+                lbl_AgregarCuota.Visible = true;  // Mostrar primera
+                lbl_EditarCuota.Visible = false; // Ocultar segunda
+            }
+            else
+            {
+                lbl_AgregarCuota.Visible = false; // Ocultar primera
+                lbl_EditarCuota.Visible = true;  // Mostrar segunda
+            }
         }
         //Para poder mover la ventana a cualquier direccion
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.panel_TituloAgregarCuota = new System.Windows.Forms.Panel();
+            this.lbl_EditarCuota = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_AgregarCuota = new System.Windows.Forms.Label();
             this.btn_Cerrar_AgregarPaciente = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_ImporteCuota = new System.Windows.Forms.TextBox();
@@ -40,10 +41,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dpt_FechaPago = new System.Windows.Forms.DateTimePicker();
-            this.cbx_EstadoPagoActivo = new System.Windows.Forms.CheckBox();
-            this.cbx_EstadoPagoAnulado = new System.Windows.Forms.CheckBox();
             this.txt_FolioPaciente = new System.Windows.Forms.TextBox();
             this.txt_FolioCaja = new System.Windows.Forms.TextBox();
+            this.rbd_EstadoPagoActivo = new System.Windows.Forms.RadioButton();
+            this.rdb_EstadoPagoAnulado = new System.Windows.Forms.RadioButton();
             this.panel_TituloAgregarCuota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar_AgregarPaciente)).BeginInit();
@@ -52,8 +53,9 @@
             // panel_TituloAgregarCuota
             // 
             this.panel_TituloAgregarCuota.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_TituloAgregarCuota.Controls.Add(this.lbl_EditarCuota);
             this.panel_TituloAgregarCuota.Controls.Add(this.pictureBox1);
-            this.panel_TituloAgregarCuota.Controls.Add(this.label8);
+            this.panel_TituloAgregarCuota.Controls.Add(this.lbl_AgregarCuota);
             this.panel_TituloAgregarCuota.Controls.Add(this.btn_Cerrar_AgregarPaciente);
             this.panel_TituloAgregarCuota.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TituloAgregarCuota.Location = new System.Drawing.Point(0, 0);
@@ -61,6 +63,17 @@
             this.panel_TituloAgregarCuota.Size = new System.Drawing.Size(341, 46);
             this.panel_TituloAgregarCuota.TabIndex = 2;
             this.panel_TituloAgregarCuota.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_TituloAgregarCuota_MouseDown);
+            // 
+            // lbl_EditarCuota
+            // 
+            this.lbl_EditarCuota.AutoSize = true;
+            this.lbl_EditarCuota.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EditarCuota.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_EditarCuota.Location = new System.Drawing.Point(51, 9);
+            this.lbl_EditarCuota.Name = "lbl_EditarCuota";
+            this.lbl_EditarCuota.Size = new System.Drawing.Size(172, 19);
+            this.lbl_EditarCuota.TabIndex = 21;
+            this.lbl_EditarCuota.Text = "Editar cuota existente";
             // 
             // pictureBox1
             // 
@@ -72,16 +85,16 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
+            // lbl_AgregarCuota
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(46, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 19);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Registrar nueva cuota";
+            this.lbl_AgregarCuota.AutoSize = true;
+            this.lbl_AgregarCuota.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AgregarCuota.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_AgregarCuota.Location = new System.Drawing.Point(46, 9);
+            this.lbl_AgregarCuota.Name = "lbl_AgregarCuota";
+            this.lbl_AgregarCuota.Size = new System.Drawing.Size(177, 19);
+            this.lbl_AgregarCuota.TabIndex = 16;
+            this.lbl_AgregarCuota.Text = "Registrar nueva cuota";
             // 
             // btn_Cerrar_AgregarPaciente
             // 
@@ -185,28 +198,6 @@
             this.dpt_FechaPago.Size = new System.Drawing.Size(198, 20);
             this.dpt_FechaPago.TabIndex = 22;
             // 
-            // cbx_EstadoPagoActivo
-            // 
-            this.cbx_EstadoPagoActivo.AutoSize = true;
-            this.cbx_EstadoPagoActivo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbx_EstadoPagoActivo.Location = new System.Drawing.Point(68, 263);
-            this.cbx_EstadoPagoActivo.Name = "cbx_EstadoPagoActivo";
-            this.cbx_EstadoPagoActivo.Size = new System.Drawing.Size(56, 17);
-            this.cbx_EstadoPagoActivo.TabIndex = 23;
-            this.cbx_EstadoPagoActivo.Text = "Activo";
-            this.cbx_EstadoPagoActivo.UseVisualStyleBackColor = true;
-            // 
-            // cbx_EstadoPagoAnulado
-            // 
-            this.cbx_EstadoPagoAnulado.AutoSize = true;
-            this.cbx_EstadoPagoAnulado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbx_EstadoPagoAnulado.Location = new System.Drawing.Point(197, 263);
-            this.cbx_EstadoPagoAnulado.Name = "cbx_EstadoPagoAnulado";
-            this.cbx_EstadoPagoAnulado.Size = new System.Drawing.Size(65, 17);
-            this.cbx_EstadoPagoAnulado.TabIndex = 24;
-            this.cbx_EstadoPagoAnulado.Text = "Anulado";
-            this.cbx_EstadoPagoAnulado.UseVisualStyleBackColor = true;
-            // 
             // txt_FolioPaciente
             // 
             this.txt_FolioPaciente.BackColor = System.Drawing.Color.LightBlue;
@@ -233,16 +224,41 @@
             this.txt_FolioCaja.TabIndex = 26;
             this.txt_FolioCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // rbd_EstadoPagoActivo
+            // 
+            this.rbd_EstadoPagoActivo.AutoSize = true;
+            this.rbd_EstadoPagoActivo.ForeColor = System.Drawing.Color.LightBlue;
+            this.rbd_EstadoPagoActivo.Location = new System.Drawing.Point(69, 265);
+            this.rbd_EstadoPagoActivo.Name = "rbd_EstadoPagoActivo";
+            this.rbd_EstadoPagoActivo.Size = new System.Drawing.Size(55, 17);
+            this.rbd_EstadoPagoActivo.TabIndex = 27;
+            this.rbd_EstadoPagoActivo.TabStop = true;
+            this.rbd_EstadoPagoActivo.Text = "Activo";
+            this.rbd_EstadoPagoActivo.UseVisualStyleBackColor = true;
+            // 
+            // rdb_EstadoPagoAnulado
+            // 
+            this.rdb_EstadoPagoAnulado.AutoSize = true;
+            this.rdb_EstadoPagoAnulado.ForeColor = System.Drawing.Color.LightBlue;
+            this.rdb_EstadoPagoAnulado.Location = new System.Drawing.Point(185, 265);
+            this.rdb_EstadoPagoAnulado.Name = "rdb_EstadoPagoAnulado";
+            this.rdb_EstadoPagoAnulado.Size = new System.Drawing.Size(64, 17);
+            this.rdb_EstadoPagoAnulado.TabIndex = 28;
+            this.rdb_EstadoPagoAnulado.TabStop = true;
+            this.rdb_EstadoPagoAnulado.Text = "Anulado";
+            this.rdb_EstadoPagoAnulado.UseVisualStyleBackColor = true;
+            // 
             // Agregar_Cuota
             // 
+            this.AcceptButton = this.btn_ValidarPago;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(341, 360);
+            this.Controls.Add(this.rdb_EstadoPagoAnulado);
+            this.Controls.Add(this.rbd_EstadoPagoActivo);
             this.Controls.Add(this.txt_FolioCaja);
             this.Controls.Add(this.txt_FolioPaciente);
-            this.Controls.Add(this.cbx_EstadoPagoAnulado);
-            this.Controls.Add(this.cbx_EstadoPagoActivo);
             this.Controls.Add(this.dpt_FechaPago);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -254,6 +270,7 @@
             this.Controls.Add(this.panel_TituloAgregarCuota);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar_Cuota";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar_Cuota";
             this.Load += new System.EventHandler(this.Agregar_Cuota_Load);
             this.panel_TituloAgregarCuota.ResumeLayout(false);
@@ -268,7 +285,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_TituloAgregarCuota;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_AgregarCuota;
         private System.Windows.Forms.PictureBox btn_Cerrar_AgregarPaciente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_ImporteCuota;
@@ -278,10 +295,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dpt_FechaPago;
-        private System.Windows.Forms.CheckBox cbx_EstadoPagoActivo;
-        private System.Windows.Forms.CheckBox cbx_EstadoPagoAnulado;
         private System.Windows.Forms.TextBox txt_FolioPaciente;
         private System.Windows.Forms.TextBox txt_FolioCaja;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_EditarCuota;
+        private System.Windows.Forms.RadioButton rbd_EstadoPagoActivo;
+        private System.Windows.Forms.RadioButton rdb_EstadoPagoAnulado;
     }
 }

@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.panel_TituloAgendarCita = new System.Windows.Forms.Panel();
+            this.lbl_EditarCita = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Cerrar_AgregarPaciente = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_AgendarCita = new System.Windows.Forms.Label();
             this.btn_Cerrar_loguin = new System.Windows.Forms.PictureBox();
             this.btn_ValidarCita = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,6 +49,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_FechaCita = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtp_HoraCita = new System.Windows.Forms.DateTimePicker();
+            this.Lst_Citas = new System.Windows.Forms.ListBox();
+            this.btn_AgregarCita = new System.Windows.Forms.Button();
+            this.btn_EliminarCita = new System.Windows.Forms.Button();
             this.panel_TituloAgendarCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar_AgregarPaciente)).BeginInit();
@@ -58,16 +64,28 @@
             // panel_TituloAgendarCita
             // 
             this.panel_TituloAgendarCita.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_TituloAgendarCita.Controls.Add(this.lbl_EditarCita);
             this.panel_TituloAgendarCita.Controls.Add(this.pictureBox2);
             this.panel_TituloAgendarCita.Controls.Add(this.Cerrar_AgregarPaciente);
-            this.panel_TituloAgendarCita.Controls.Add(this.label8);
+            this.panel_TituloAgendarCita.Controls.Add(this.lbl_AgendarCita);
             this.panel_TituloAgendarCita.Controls.Add(this.btn_Cerrar_loguin);
             this.panel_TituloAgendarCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TituloAgendarCita.Location = new System.Drawing.Point(0, 0);
             this.panel_TituloAgendarCita.Name = "panel_TituloAgendarCita";
-            this.panel_TituloAgendarCita.Size = new System.Drawing.Size(400, 46);
+            this.panel_TituloAgendarCita.Size = new System.Drawing.Size(430, 46);
             this.panel_TituloAgendarCita.TabIndex = 2;
             this.panel_TituloAgendarCita.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_TituloAgendarCita_MouseDown_1);
+            // 
+            // lbl_EditarCita
+            // 
+            this.lbl_EditarCita.AutoSize = true;
+            this.lbl_EditarCita.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EditarCita.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_EditarCita.Location = new System.Drawing.Point(57, 12);
+            this.lbl_EditarCita.Name = "lbl_EditarCita";
+            this.lbl_EditarCita.Size = new System.Drawing.Size(186, 19);
+            this.lbl_EditarCita.TabIndex = 21;
+            this.lbl_EditarCita.Text = "Modificar cita existente";
             // 
             // pictureBox2
             // 
@@ -88,18 +106,18 @@
             this.Cerrar_AgregarPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Cerrar_AgregarPaciente.TabIndex = 17;
             this.Cerrar_AgregarPaciente.TabStop = false;
-            this.Cerrar_AgregarPaciente.Click += new System.EventHandler(this.Cerrar_AgregarPaciente_Click);
+            this.Cerrar_AgregarPaciente.Click += new System.EventHandler(this.Cerrar_AgendarCita_Click);
             // 
-            // label8
+            // lbl_AgendarCita
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(57, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 19);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Agendar nueva cita";
+            this.lbl_AgendarCita.AutoSize = true;
+            this.lbl_AgendarCita.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AgendarCita.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_AgendarCita.Location = new System.Drawing.Point(57, 12);
+            this.lbl_AgendarCita.Name = "lbl_AgendarCita";
+            this.lbl_AgendarCita.Size = new System.Drawing.Size(166, 19);
+            this.lbl_AgendarCita.TabIndex = 16;
+            this.lbl_AgendarCita.Text = "Agendar nueva cita";
             // 
             // btn_Cerrar_loguin
             // 
@@ -118,7 +136,7 @@
             this.btn_ValidarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ValidarCita.Font = new System.Drawing.Font("Futura Md BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ValidarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_ValidarCita.Location = new System.Drawing.Point(143, 287);
+            this.btn_ValidarCita.Location = new System.Drawing.Point(175, 376);
             this.btn_ValidarCita.Name = "btn_ValidarCita";
             this.btn_ValidarCita.Size = new System.Drawing.Size(99, 32);
             this.btn_ValidarCita.TabIndex = 32;
@@ -131,7 +149,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(311, 132);
+            this.label7.Location = new System.Drawing.Point(328, 131);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 21);
             this.label7.TabIndex = 31;
@@ -141,18 +159,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(139, 206);
+            this.label5.Location = new System.Drawing.Point(88, 214);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 21);
+            this.label5.Size = new System.Drawing.Size(63, 21);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Fecha y hora:";
+            this.label5.Text = "Fecha:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(228, 137);
+            this.label4.Location = new System.Drawing.Point(245, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 21);
             this.label4.TabIndex = 26;
@@ -170,7 +188,7 @@
             "Pediátrico",
             "Estudiante",
             "Deportista"});
-            this.cbx_TipoPaciente.Location = new System.Drawing.Point(20, 168);
+            this.cbx_TipoPaciente.Location = new System.Drawing.Point(37, 167);
             this.cbx_TipoPaciente.Name = "cbx_TipoPaciente";
             this.cbx_TipoPaciente.Size = new System.Drawing.Size(162, 29);
             this.cbx_TipoPaciente.TabIndex = 24;
@@ -181,7 +199,7 @@
             this.txt_BusquedaPacienteCita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_BusquedaPacienteCita.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_BusquedaPacienteCita.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txt_BusquedaPacienteCita.Location = new System.Drawing.Point(13, 88);
+            this.txt_BusquedaPacienteCita.Location = new System.Drawing.Point(30, 88);
             this.txt_BusquedaPacienteCita.Multiline = true;
             this.txt_BusquedaPacienteCita.Name = "txt_BusquedaPacienteCita";
             this.txt_BusquedaPacienteCita.Size = new System.Drawing.Size(179, 30);
@@ -216,7 +234,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(7, 59);
+            this.label10.Location = new System.Drawing.Point(24, 59);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(180, 21);
             this.label10.TabIndex = 35;
@@ -227,7 +245,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(35, 137);
+            this.label3.Location = new System.Drawing.Point(52, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 21);
             this.label3.TabIndex = 36;
@@ -244,7 +262,7 @@
             "Valoración",
             "Terapia",
             "Revaloración"});
-            this.cbx_TipoTerapia.Location = new System.Drawing.Point(229, 168);
+            this.cbx_TipoTerapia.Location = new System.Drawing.Point(246, 167);
             this.cbx_TipoTerapia.Name = "cbx_TipoTerapia";
             this.cbx_TipoTerapia.Size = new System.Drawing.Size(150, 29);
             this.cbx_TipoTerapia.TabIndex = 37;
@@ -260,7 +278,7 @@
             "Activa",
             "Reprogramada",
             "Cancelada"});
-            this.cbx_EstadoCita.Location = new System.Drawing.Point(232, 88);
+            this.cbx_EstadoCita.Location = new System.Drawing.Point(249, 88);
             this.cbx_EstadoCita.Name = "cbx_EstadoCita";
             this.cbx_EstadoCita.Size = new System.Drawing.Size(147, 29);
             this.cbx_EstadoCita.TabIndex = 38;
@@ -270,7 +288,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(251, 59);
+            this.label2.Location = new System.Drawing.Point(268, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 21);
             this.label2.TabIndex = 39;
@@ -278,19 +296,78 @@
             // 
             // dtp_FechaCita
             // 
-            this.dtp_FechaCita.Location = new System.Drawing.Point(92, 240);
+            this.dtp_FechaCita.Location = new System.Drawing.Point(20, 242);
             this.dtp_FechaCita.Name = "dtp_FechaCita";
-            this.dtp_FechaCita.Size = new System.Drawing.Size(202, 20);
+            this.dtp_FechaCita.Size = new System.Drawing.Size(203, 20);
             this.dtp_FechaCita.TabIndex = 40;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FISCLINGEST.Properties.Resources.Buscar_paciente;
-            this.pictureBox1.Location = new System.Drawing.Point(193, 91);
+            this.pictureBox1.Location = new System.Drawing.Point(210, 91);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 27);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(260, 214);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 21);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Hora:";
+            // 
+            // dtp_HoraCita
+            // 
+            this.dtp_HoraCita.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtp_HoraCita.Location = new System.Drawing.Point(246, 242);
+            this.dtp_HoraCita.Name = "dtp_HoraCita";
+            this.dtp_HoraCita.ShowUpDown = true;
+            this.dtp_HoraCita.Size = new System.Drawing.Size(84, 20);
+            this.dtp_HoraCita.TabIndex = 43;
+            // 
+            // Lst_Citas
+            // 
+            this.Lst_Citas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Lst_Citas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Lst_Citas.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.Lst_Citas.ForeColor = System.Drawing.Color.White;
+            this.Lst_Citas.FormattingEnabled = true;
+            this.Lst_Citas.ItemHeight = 21;
+            this.Lst_Citas.Location = new System.Drawing.Point(56, 286);
+            this.Lst_Citas.Name = "Lst_Citas";
+            this.Lst_Citas.Size = new System.Drawing.Size(310, 84);
+            this.Lst_Citas.TabIndex = 44;
+            // 
+            // btn_AgregarCita
+            // 
+            this.btn_AgregarCita.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_AgregarCita.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btn_AgregarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarCita.Location = new System.Drawing.Point(352, 236);
+            this.btn_AgregarCita.Name = "btn_AgregarCita";
+            this.btn_AgregarCita.Size = new System.Drawing.Size(30, 30);
+            this.btn_AgregarCita.TabIndex = 45;
+            this.btn_AgregarCita.Text = "+";
+            this.btn_AgregarCita.UseVisualStyleBackColor = true;
+            this.btn_AgregarCita.Click += new System.EventHandler(this.btn_AgregarCita_Click);
+            // 
+            // btn_EliminarCita
+            // 
+            this.btn_EliminarCita.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_EliminarCita.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btn_EliminarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarCita.Location = new System.Drawing.Point(388, 236);
+            this.btn_EliminarCita.Name = "btn_EliminarCita";
+            this.btn_EliminarCita.Size = new System.Drawing.Size(30, 30);
+            this.btn_EliminarCita.TabIndex = 46;
+            this.btn_EliminarCita.Text = "-";
+            this.btn_EliminarCita.UseVisualStyleBackColor = true;
+            this.btn_EliminarCita.Click += new System.EventHandler(this.btn_EliminarCita_Click);
             // 
             // Agendar_Cita
             // 
@@ -298,7 +375,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(400, 341);
+            this.ClientSize = new System.Drawing.Size(430, 420);
+            this.Controls.Add(this.btn_EliminarCita);
+            this.Controls.Add(this.btn_AgregarCita);
+            this.Controls.Add(this.Lst_Citas);
+            this.Controls.Add(this.dtp_HoraCita);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dtp_FechaCita);
             this.Controls.Add(this.label2);
@@ -334,7 +416,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_TituloAgendarCita;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_AgendarCita;
         private System.Windows.Forms.PictureBox btn_Cerrar_loguin;
         private System.Windows.Forms.Button btn_ValidarCita;
         private System.Windows.Forms.Label label7;
@@ -353,5 +435,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox Cerrar_AgregarPaciente;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbl_EditarCita;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtp_HoraCita;
+        private System.Windows.Forms.ListBox Lst_Citas;
+        private System.Windows.Forms.Button btn_AgregarCita;
+        private System.Windows.Forms.Button btn_EliminarCita;
     }
 }

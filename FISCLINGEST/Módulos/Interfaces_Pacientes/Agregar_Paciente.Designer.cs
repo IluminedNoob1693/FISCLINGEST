@@ -30,7 +30,7 @@
         {
             this.panel_TituloAgregarPac = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_AgregarPaciente = new System.Windows.Forms.Label();
             this.btn_Cerrar_AgregarPaciente = new System.Windows.Forms.PictureBox();
             this.txt_NombrePaciente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.btn_ValidarPaciente = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_AgregarHistorial = new System.Windows.Forms.Button();
+            this.lbl_EditarPaciente = new System.Windows.Forms.Label();
             this.panel_TituloAgregarPac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar_AgregarPaciente)).BeginInit();
@@ -57,8 +58,9 @@
             // panel_TituloAgregarPac
             // 
             this.panel_TituloAgregarPac.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel_TituloAgregarPac.Controls.Add(this.lbl_EditarPaciente);
             this.panel_TituloAgregarPac.Controls.Add(this.pictureBox1);
-            this.panel_TituloAgregarPac.Controls.Add(this.label8);
+            this.panel_TituloAgregarPac.Controls.Add(this.lbl_AgregarPaciente);
             this.panel_TituloAgregarPac.Controls.Add(this.btn_Cerrar_AgregarPaciente);
             this.panel_TituloAgregarPac.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TituloAgregarPac.Location = new System.Drawing.Point(0, 0);
@@ -77,16 +79,16 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
+            // lbl_AgregarPaciente
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(51, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 19);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Agregar nuevo Paciente";
+            this.lbl_AgregarPaciente.AutoSize = true;
+            this.lbl_AgregarPaciente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AgregarPaciente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_AgregarPaciente.Location = new System.Drawing.Point(51, 9);
+            this.lbl_AgregarPaciente.Name = "lbl_AgregarPaciente";
+            this.lbl_AgregarPaciente.Size = new System.Drawing.Size(199, 19);
+            this.lbl_AgregarPaciente.TabIndex = 16;
+            this.lbl_AgregarPaciente.Text = "Agregar nuevo Paciente";
             // 
             // btn_Cerrar_AgregarPaciente
             // 
@@ -297,8 +299,20 @@
             this.btn_AgregarHistorial.UseVisualStyleBackColor = false;
             this.btn_AgregarHistorial.Click += new System.EventHandler(this.btn_AgregarHistorial_Click);
             // 
+            // lbl_TituloEditarPaciente
+            // 
+            this.lbl_EditarPaciente.AutoSize = true;
+            this.lbl_EditarPaciente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EditarPaciente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_EditarPaciente.Location = new System.Drawing.Point(53, 9);
+            this.lbl_EditarPaciente.Name = "lbl_TituloEditarPaciente";
+            this.lbl_EditarPaciente.Size = new System.Drawing.Size(124, 19);
+            this.lbl_EditarPaciente.TabIndex = 21;
+            this.lbl_EditarPaciente.Text = "Editar Paciente";
+            // 
             // Agregar_Paciente
             // 
+            this.AcceptButton = this.btn_ValidarPaciente;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -322,6 +336,7 @@
             this.Controls.Add(this.panel_TituloAgregarPac);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar_Paciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar_Paciente";
             this.Load += new System.EventHandler(this.Agregar_Paciente_Load);
             this.panel_TituloAgregarPac.ResumeLayout(false);
@@ -349,12 +364,13 @@
         private System.Windows.Forms.TextBox txt_ContactoPaciente;
         private System.Windows.Forms.CheckBox ckb_ExentoPago;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_ValidarPaciente;
         private System.Windows.Forms.Button btn_AgregarHistorial;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_AgregarPaciente;
+        private System.Windows.Forms.Label lbl_EditarPaciente;
     }
 }

@@ -23,14 +23,30 @@ namespace FISCLINGEST.Módulos.Interfaces_Citas
             int nWidthEllipse, // ancho de la elipse
             int nHeightEllipse // alto de la elipse
         );
-        public Agendar_Cita()
+        // Propiedad pública para que el Form1 pueda leer las citas aprobadas
+        public List<CitasService> CitasAgendadas { get; private set; } = new List<CitasService>();
+
+        public Agendar_Cita(int tituloCita)
         {
             InitializeComponent();
-                this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-                this.Load += Agendar_Cita_Load;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            this.Load += Agendar_Cita_Load;
+
+            //Cambiar título del formulario y visibilidad de etiquetas según el valor de tituloCita
+            if (tituloCita == 1)
+            {
+                lbl_AgendarCita.Visible = true;  // Mostrar primera
+                lbl_EditarCita.Visible = false; // Ocultar segunda
+            }
+            else
+            {
+                lbl_AgendarCita.Visible = false; // Ocultar primera
+                lbl_EditarCita.Visible = true;  // Mostrar segunda
+            }
+
         }
-             
-        private void Cerrar_AgregarPaciente_Click(object sender, EventArgs e)
+
+        private void Cerrar_AgendarCita_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -39,11 +55,62 @@ namespace FISCLINGEST.Módulos.Interfaces_Citas
         {
 
         }
+        private void btn_AgregarCita_Click(object sender, EventArgs e)
+        {
+            // Combinar la fecha de un componente con la hora del otro
+            DateTime fechaSeleccionada = dtp_FechaCita.Value.Date;
+            DateTime horaSeleccionada = dtp_HoraCita.Value;
+            DateTime fechaHoraCombinada = fechaSeleccionada.Add(horaSeleccionada.TimeOfDay);
 
+            // VALIDACIÓN DE HORA: Evita agendar horas que ya transcurrieron el día de hoy
+            if (fechaHoraCombinada < DateTime.Now)
+            {
+                MessageBox.Show("No puedes agendar una cita en una hora o fecha que ya ha pasado.", "Fecha Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validar el límite máximo solicitado
+            if (CitasAgendadas.Count >= 4)
+            {
+                MessageBox.Show("Solo puedes agendar un máximo de 4 citas a la vez.", "Límite alcanzado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Evitar duplicados exactos en la lista
+            if (CitasAgendadas.Exists(c => c.FechaHora == fechaHoraCombinada))
+            {
+                MessageBox.Show("Ya has agregado una cita exactamente a esa misma hora.", "Cita Duplicada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Registrar la cita
+            CitasService nuevaCita = new CitasService { FechaHora = fechaHoraCombinada };
+            CitasAgendadas.Add(nuevaCita);
+
+            // Reflejar en la interfaz de usuario
+            Lst_Citas.Items.Add(fechaHoraCombinada.ToString("dd/MM/yyyy - hh:mm tt"));
+        }
+        private void btn_EliminarCita_Click(object sender, EventArgs e)
+        {
+            if (Lst_Citas.SelectedIndex != -1)
+            {
+                int indice = Lst_Citas.SelectedIndex;
+                CitasAgendadas.RemoveAt(indice);
+                Lst_Citas.Items.RemoveAt(indice);
+            }
+        }
         private void btn_ValidarCita_Click(object sender, EventArgs e)
         {
+            if (CitasAgendadas.Count == 0)
+            {
+                MessageBox.Show("Debes agregar al menos una cita para continuar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
+            this.DialogResult = DialogResult.OK; // Cierra el modal indicando éxito
+            this.Close();
         }
+
         //Para poder mover la ventana a cualquier direccion
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -76,6 +143,9 @@ namespace FISCLINGEST.Módulos.Interfaces_Citas
 
             //Redondear el ComboBox de tipo de terapia
             cbx_TipoTerapia.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, cbx_TipoTerapia.Width, cbx_TipoTerapia.Height, 15, 15));
+
+            // Restringe el calendario para que la fecha mínima seleccionable sea el día de hoy
+            dtp_FechaCita.MinDate = DateTime.Today;
         }
     }
-}
+}   
